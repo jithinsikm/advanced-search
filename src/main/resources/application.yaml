@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: advanced-search
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/poc_db
+    username: ksmart
+    password: ksmart@123
+
+  liquibase:
+    enabled: 'true'
+    drop-first: 'false'
+    change-log: classpath:/db/changelog/changelog-master.xml
+  jpa:
+    hibernate:
+      ddl-auto: validate
